@@ -188,6 +188,27 @@ public class Actividad3_2_2{
     Cuando el usuario selecciona una opción (del 1 al 5), el programa debe solicitar los números necesarios para realizar la operación y mostrar el resultado de dicha operación. 
     El programa debe repetir el proceso hasta que el usuario seleccione la opción "Salir". La opción “Salir” muestra un mensaje de despedida y finaliza la ejecución del programa */
 
+
+    public static void sumar(int num1, int num2){
+        int suma = num1 + num2;
+        System.out.println("La suma es " + suma);
+    }
+    public static void restar(int num1, int num2){
+        int resta = num1 - num2;
+        System.out.println("La resta es " + resta);
+    }
+    public static void multiplicar(int num1, int num2){
+        int multiplicación = num1 * num2;
+        System.out.println("La multiplicación es " + multiplicación);
+    }
+     public static void dividir(int num1, int num2){
+        if (num2 != 0) {
+            double division = (double) num1 / num2;
+            System.out.println("La división es " + division);
+        } else {
+            System.out.println("Error: No se puede dividir entre cero.");
+        }
+    }
     public static void ejercicio8(){
         Scanner sc = new Scanner(System.in);
         int opcion;
@@ -208,36 +229,29 @@ public class Actividad3_2_2{
                     num1 = sc.nextInt();
                     System.out.print("Introduce el segundo número: ");
                     num2 = sc.nextInt();
-                    int suma = num1 + num2;
-                    System.out.println("Resultado: " + suma);
+                    sumar(num1, num2);
                     break;
+                   
                 case 2:
                     System.out.print("Introduce el primer número: ");
                     num1 = sc.nextInt();
                     System.out.print("Introduce el segundo número: ");
                     num2 = sc.nextInt();
-                    int resta = num1 - num2;
-                    System.out.println("Resultado: " + resta);
+                    restar(num1, num2);
                     break;
                 case 3:
                     System.out.print("Introduce el primer número: ");
                     num1 = sc.nextInt();
                     System.out.print("Introduce el segundo número: ");
                     num2 = sc.nextInt();
-                    int multiplicacion = num1 * num2;
-                    System.out.println("Resultado: " + multiplicacion);
+                    multiplicar(num1, num2);
                     break;
                 case 4:
                     System.out.print("Introduce el primer número: ");
                     num1 = sc.nextInt();
                     System.out.print("Introduce el segundo número: ");
                     num2 = sc.nextInt();
-                    if (num2 != 0) {
-                        double division = (double) num1 / num2;
-                        System.out.println("Resultado: " + division);
-                    } else {
-                        System.out.println("Error: No se puede dividir entre cero.");
-                    }
+                    dividir(num1, num2);
                     break;
                 case 5:
                     ejercicio6();
