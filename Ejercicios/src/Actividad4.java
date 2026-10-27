@@ -6,12 +6,12 @@ public class Actividad4 {
     
   public static void main(String[] args) throws Exception {
         
-        //Ejercicio1();
+        Ejercicio1();
         //Ejercicio2();
         //Ejercicio3();
         //Ejercicio4();
         //Ejercicio5();
-        Ejercicio6();
+        //Ejercicio6();
         
     }
     /*1. Realiza una función llamada suma que sume dos números enteros
@@ -19,9 +19,7 @@ public class Actividad4 {
     muestra su resultado. */
 
     public static int suma(int num1, int num2){
-        int resultado = num1 + num2;
-        System.out.println("La suma es "+ resultado);
-        return resultado;
+        return num1 + num2;
     }
     public static void Ejercicio1(){
         Scanner sc= new Scanner(System.in);
@@ -29,7 +27,8 @@ public class Actividad4 {
         int num1 = sc.nextInt();
         System.out.println("Dime el segundo numero");
         int num2 = sc.nextInt();
-        suma(num1,num2);
+        int resultado = suma(num1,num2);
+        System.out.println("El resultado es" + resultado);
     }
 
     /*2. Realiza un método llamado holaMundo que al ser llamada
